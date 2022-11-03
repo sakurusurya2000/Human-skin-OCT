@@ -1,0 +1,12 @@
+Week 1-2 (6 hrs)
+Understand the data and tasks, refine the workflow and prepare the functional
+specification document
+
+Week 3-4 (10 hrs)
+Pre-process the data, Produce visualization prototypes using Five Design Sheet methodology, take feedback from the client and alpha release.
+
+Week 5-7 (12 hrs)
+Refine visual representation and implementation, prepare for beta release, documentation.
+
+Week 8 (8hrs)
+Prepare for the presentation and final demo of the project

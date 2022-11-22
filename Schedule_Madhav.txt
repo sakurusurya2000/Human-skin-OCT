@@ -8,7 +8,14 @@ Mapping data to the visual encoding	(3)
 Design the interactions with Data	(3)
 
 
-# prototype
+# prototype (5)
+
 # alpha
+Visual body encoding 
+mapping OCT images data with the visual body encoding
+
 # beta
+Filter images based on the selected age and skin tone.
+get coords of oct images
+
 # release

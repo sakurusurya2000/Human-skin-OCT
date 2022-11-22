@@ -1,6 +1,7 @@
 
 <!doctype html>
 <html lang="en">
+	<a href="#container"></a>
 	<head>
 		<title>BodyVisualiser</title>
 		<meta charset="utf-8">
@@ -8,79 +9,79 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<div class="navbar">
 			<a class="logo" id="logo" href="#logo"><img src="images/logo.svg" height="40" width="200" alt="logo"/></a>
-			<div class="dropdown">
-				<button class="dropbtn">GENDER 
-				  <i class="fa fa-caret-down"></i>
-				</button>
-				<div class="dropdown-content">
-				  <a href="male_front.html">Male</a>
-				  <a href="female_front.html">Female</a>
-				</div>
-			</div>
-			<div class="dropdown">
-				<button class="dropbtn">AGE 
-				  <i class="fa fa-caret-down"></i>
-				</button>
-				<div class="dropdown-content">
-				  <a href="#">Less than 30 Years</a>
-				  <a href="#">30-60 Years</a>
-				  <a href="#">More than 60 Years</a>
-				</div>
-			  </div>
-			  <div class="dropdown">
-				<button class="dropbtn">SKINTONE 
-				  <i class="fa fa-caret-down"></i>
-				</button>
-				<div class="dropdown-content">
-				  <a href="#">TYPE I-II</a>
-				  <a href="#">TYPE II-IV</a>
-				  <a href="#">TYPE V +</a>
-				</div>
-			  </div>
-			  <div class="dropdown">
-				<button class="dropbtn">FACING 
-				  <i class="fa fa-caret-down"></i>
-				</button>
-				<div class="dropdown-content">
-				  <a href="male_front.html">FRONT</a>
-				  <a href="male_back.html">BACK</a>
-				</div>
-			  </div>
-			</div>
+		</div>
 	</head>
 
 
-	<body>
+	<body style="overflow-y: scroll; overflow-x: scroll;">
 		<div class="row no-gutters">
 			<div class="col">
 				<div class="leftside no-gutters">
+					<br>
+					<select class="select" id="age">
+						<option value="0">AGE</option>
+						<option value="1">Less than 30 Years</option>
+						<option value="2">30-60 Years</option>
+						<option value="3">More than 60 Years</option>
+					</select>
+					<select class="select" id="tone">
+						<option value="0">SKINTONE</option>
+						<option value="1">TYPE I-II</option>
+						<option value="2">TYPE III-IV</option>
+						<option value="3">TYPE V</option>
+					</select>
+					<br>
+					<br>
+					<a href="male_back.html"><button class="button">Switch Facing</button></a>
+					<button id="reset" class="button">Reset</button>
+					<br>					
 					<img src="./images/male-front.jpg" alt="Front Male" usemap="#image-map-male-front">
 					<map id = "map_ID_male_front" name="image-map-male-front">
 						<area id="Forehead" title="Forehead" href="" coords="146,28,156,42,96,42,105,28,125,21,125,21,125,21" shape="poly">
-						<area target="_self" id="Nasal Tip" title="Nasal Tip" href="" coords="126,70,7" shape="circle">
-						<area target="_self" id="CheekR" title="CheekR" href="" coords="146,83,9" shape="circle">
-						<area target="_self" id="CheekL" title="CheekL" href="" coords="106,83,9" shape="circle">
+						<area target="_self" id="NasalTip" title="Nasal Tip" href="" coords="126,70,7" shape="circle">
+						<area target="_self" id="Cheek" title="Cheek" href="" coords="146,83,9" shape="circle">
+						<area target="_self" id="Cheek" title="Cheek" href="" coords="106,83,9" shape="circle">
 						<area target="_self" id="Lip" title="Lip" href="" coords="118,84,134,91" shape="rect">
-						<area target="_self" id="Anterior Neck" title="Anterior Neck" href="" coords="107,103,118,109,132,109,143,104,144,117,106,117" shape="poly">
-						<area target="_self" id="ChestL" title="ChestL" href="" coords="95,178,20" shape="circle">
-						<area target="_self" id="ChestR" title="ChestR" href="" coords="155,178,21" shape="circle">
+						<area target="_self" id="AnteriorNeck" title="Anterior Neck" href="" coords="107,103,118,109,132,109,143,104,144,117,106,117" shape="poly">
+						<area target="_self" id="Chest" title="Chest" href="" coords="95,178,20" shape="circle">
+						<area target="_self" id="Chest" title="Chest" href="" coords="155,178,21" shape="circle">
 						<area target="_self" id="Abdomen" title="Abdomen" href="" coords="92,219,159,220,158,274,127,296,92,272,92,253" shape="poly">
-						<area target="_self" id="Anterior ForearmL" title="Anterior ForearmL" href="" coords="40,245,61,248,64,263,46,309,29,301,32,266" shape="poly">
-						<area target="_self" id="Anterior ForearmR" title="Anterior ForearmR" href="" coords="187,251,210,245,218,264,220,302,205,308,188,269" shape="poly">
-						<area target="_self" id="Anterior ArmL" title="Anterior ArmL" href="" coords="46,178,70,182,70,207,63,241,42,237,41,205" shape="poly">
-						<area target="_self" id="Anterior ArmR" title="Anterior ArmR" href="" coords="180,185,203,181,208,199,208,235,187,241,180,206" shape="poly">
-						<area target="_self" id="PalmL" title="PalmL" href="" coords="29,339,25" shape="circle">
-						<area target="_self" id="PalmR" title="PalmR" href="" coords="220,339,25" shape="circle">
-						<area target="_self" id="ThighL" title="ThighL" href="" coords="120,333,121,364,121,397,84,399,78,363,77,330" shape="poly">
-						<area target="_self" id="ThighR" title="ThighR" href="" coords="128,332,173,329,172,365,167,398,129,397,128,365" shape="poly">
-						<area target="_self" id="ShinL" title="ShinL" href="" coords="88,461,89,481,100,527,120,525,122,480,122,461" shape="poly">
-						<area target="_self" id="ShinR" title="ShinR" href="" coords="128,461,128,480,130,524,151,525,161,482,162,460" shape="poly">
-						<area target="_self" id="Dorsal FootL" title="Dorsal FootL" href="" coords="123,551,124,576,104,576,89,568,101,551" shape="poly">
-						<area target="_self" id="Dorsal FootR" title="Dorsal FootR" href="" coords="128,551,127,576,148,576,163,569,149,551" shape="poly">
+						<area target="_self" id="AnteriorForeArm" title="Anterior Forearm" href="" coords="40,245,61,248,64,263,46,309,29,301,32,266" shape="poly">
+						<area target="_self" id="AnteriorForeArm" title="Anterior Forearm" href="" coords="187,251,210,245,218,264,220,302,205,308,188,269" shape="poly">
+						<area target="_self" id="AnteriorUpperArm" title="Anterior Upperarm" href="" coords="46,178,70,182,70,207,63,241,42,237,41,205" shape="poly">
+						<area target="_self" id="AnteriorUpperArm" title="Anterior Upperarm" href="" coords="180,185,203,181,208,199,208,235,187,241,180,206" shape="poly">
+						<area target="_self" id="Palm" title="Palm" href="" coords="29,339,25" shape="circle">
+						<area target="_self" id="Palm" title="Palm" href="" coords="220,339,25" shape="circle">
+						<area target="_self" id="Thigh" title="Thigh" href="" coords="120,333,121,364,121,397,84,399,78,363,77,330" shape="poly">
+						<area target="_self" id="Thigh" title="Thigh" href="" coords="128,332,173,329,172,365,167,398,129,397,128,365" shape="poly">
+						<area target="_self" id="Shin" title="Shin" href="" coords="88,461,89,481,100,527,120,525,122,480,122,461" shape="poly">
+						<area target="_self" id="Shin" title="Shin" href="" coords="128,461,128,480,130,524,151,525,161,482,162,460" shape="poly">
+						<area target="_self" id="DorsalFoot" title="Dorsal Foot" href="" coords="123,551,124,576,104,576,89,568,101,551" shape="poly">
+						<area target="_self" id="DorsalFoot" title="Dorsal Foot" href="" coords="128,551,127,576,148,576,163,569,149,551" shape="poly">
 					</map>
 					<br>
 					<br>
-					<em>Male Front</em>
+					<em>Front</em>
+				</div>
+			</div>
+			<div class="col">
+				<div class="middle no-gutters">
+					<div class="row">
+						<div class="top no-gutters">
+							<div class="text">
+								<p id="top"></p>
+							</div>
+							<img id="OCT_image" src="./images/none.jpg" width="600px" height="300px">
+						</div>
+					</div>
+					<div class="row">
+						<div class="bottom no-gutters">
+							<br>
+							<!-- <div class="text_style">
+								<p id="text"></p>
+							</div> -->
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="col">
@@ -88,66 +89,34 @@
 					<div class="row">
 						<div class="top no-gutters">
 							<br>
-							<img id="OCT_image" src="./images/none.jpg">
+							<div class="text_style">
+								<p id="text"></p>
+							</div>
 						</div>
 					</div>
 					<div class="row">
-						<div class="bottom no-gutters" padding-right="100px" padding-left="100px">
-							<br>
-							<p id="text" text-align="justfy" text-justify="inter-word"></p>
+						<div class="bottom no-gutters">
+							
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<!-- <div id="info"><a href="index.html">Switch to male body.</div>
-        <div id="info"><a href="female.html">Switch to female body.</a></div>
-		<div id="info"><a href="kid.html">Switch to kid's body.</a></div> -->
-		<div id="container"></div>
 		
-		<script src="js/three.js"></script>
+		<!-- <script src="js/three.js"></script>
 		
 		<script src="js/UCSCharacter.js"></script>
 
 		<script src='js/data.gui.js'></script>
 				
-		<script src="js/orbit.js"></script>
+		<script src="js/orbit.js"></script> -->
 
 		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 		<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
 
 		<script>
-			window.onload = function () {
-				var ImageMap = function (map, img) {
-						var n,
-							areas = map.getElementsByTagName('area'),
-							len = areas.length,
-							coords = [],
-							previousWidth = 250;
-						for (n = 0; n < len; n++) {
-							coords[n] = areas[n].coords.split(',');
-						}
-						this.resize = function () {
-							var n, m, clen,
-								x = img.offsetWidth / previousWidth;
-							for (n = 0; n < len; n++) {
-								clen = coords[n].length;
-								for (m = 0; m < clen; m++) {
-									coords[n][m] *= x;
-								}
-								areas[n].coords = coords[n].join(',');
-							}
-							previousWidth = img.offsetWidth;
-							return true;
-						};
-						window.onresize = this.resize;
-					},
-					imageMap = new ImageMap(document.getElementById('map_ID'), document.getElementById('img_ID'));
-				imageMap.resize();
-				return;
-			}
 			
 			$(document).tooltip({
 				track: true,
@@ -155,63 +124,190 @@
 			
 			});
 
+			var arr = {'Forehead': 
+						[['P1_Forehead.png', 'P2_Forehead.png', 'P3_Forehead.png'],
+						['P4_Forehead.png', 'P5_Forehead.png', 'P6_Forehead.png'],
+						['P7_Forehead.png', 'P8_Forehead.png', 'P9_Forehead.png']],
+						'Cheek': 
+						[['P1_Cheek.png', 'P2_Cheek.png', 'P3_Cheek.png'],
+						['P4_Cheek.png', 'P5_Cheek.png', 'P6_Cheek.png'],
+						['P7_Cheek.png', 'P8_Cheek.png', 'P9_Cheek.png']],
+						'NasalTip': 
+						[['P1_NasalTip.png', 'P2_NasalTip.png', 'P3_NasalTip.png'],
+						['P4_NasalTip.png', 'P5_NasalTip.png', 'P6_NasalTip.png'],
+						['P7_NasalTip.png', 'P8_NasalTip.png', 'P9_NasalTip.png']],
+						'Lip': 
+						[['P1_Lip.png', 'P2_Lip.png', 'P3_Lip.png'],
+						['P4_Lip.png', 'P5_Lip.png', 'P6_Lip.png'],
+						['P7_Lip.png', 'P8_Lip.png', 'P9_Lip.png']],
+						'Ear': 
+						[['P1_Ear.png', 'P2_Ear.png', 'P3_Ear.png'],
+						['P4_Ear.png', 'P5_Ear.png', 'P6_Ear.png'],
+						['P7_Ear.png', 'P8_Ear.png', 'P9_Ear.png']],
+						'AnteriorNeck': 
+						[['P1_AnteriorNeck.png', 'P2_AnteriorNeck.png', 'P3_AnteriorNeck.png'],
+						['P4_AnteriorNeck.png', 'P5_AnteriorNeck.png', 'P6_AnteriorNeck.png'],
+						['P7_AnteriorNeck.png', 'P8_AnteriorNeck.png', 'P9_AnteriorNeck.png']],
+						'Chest': 
+						[['P1_Chest.png', 'P2_Chest.png', 'P3_Chest.png'],
+						['P4_Chest.png', 'P5_Chest.png', 'P6_Chest.png'],
+						['P7_Chest.png', 'P8_Chest.png', 'P9_Chest.png']],
+						'AnteriorUpperArm': 
+						[['P1_Anterior_Upper_Arm.png', 'P2_Anterior_Upper_Arm.png', 'P3_Anterior_Upper_Arm.png'],
+						['P4_Anterior_Upper_Arm.png', 'P5_Anterior_Upper_Arm.png', 'P6_Anterior_Upper_Arm.png'],
+						['P7_Anterior_Upper_Arm.png', 'P8_Anterior_Upper_Arm.png', 'P9_Anterior_Upper_Arm.png']],
+						'AnteriorForeArm': 
+						[['P1_Anterior_ForeArm.png', 'P2_Anterior_ForeArm.png', 'P3_Anterior_ForeArm.png'],
+						['P4_Anterior_ForeArm.png', 'P5_Anterior_ForeArm.png', 'P6_Anterior_ForeArm.png'],
+						['P7_Anterior_ForeArm.png', 'P8_Anterior_ForeArm.png', 'P9_Anterior_ForeArm.png']],
+						'Palm': 
+						[['P1_Palm.png', 'P2_Palm.png', 'P3_Palm.png'],
+						['P4_Palm.png', 'P5_Palm.png', 'P6_Palm.png'],
+						['P7_Palm.png', 'P8_Palm.png', 'P9_Palm.png']],
+						'Abdomen': 
+						[['P1_Abdomen.png', 'P2_Abdomen.png', 'P3_Abdomen.png'],
+						['P4_Abdomen.png', 'P5_Abdomen.png', 'P6_Abdomen.png'],
+						['P7_Abdomen.png', 'P8_Abdomen.png', 'P9_Abdomen.png']],
+						'Shin': 
+						[['P1_Shin.png', 'P2_Shin.png', 'P3_Shin.png'],
+						['P4_Shin.png', 'P5_Shin.png', 'P6_Shin.png'],
+						['P7_Shin.png', 'P8_Shin.png', 'P9_Shin.png']],
+						'Thigh': 
+						[['P1_Thigh.png', 'P2_Thigh.png', 'P3_Thigh.png'],
+						['P4_Thigh.png', 'P5_Thigh.png', 'P6_Thigh.png'],
+						['P7_Thigh.png', 'P8_Thigh.png', 'P9_Thigh.png']],
+						'DorsalFoot': 
+						[['P1_Dorsal_Foot.png', 'P2_Dorsal_Foot.png', 'P3_Dorsal_Foot.png'],
+						['P4_Dorsal_Foot.png', 'P5_Dorsal_Foot.png', 'P6_Dorsal_Foot.png'],
+						['P7_Dorsal_Foot.png', 'P8_Dorsal_Foot.png', 'P9_Dorsal_Foot.png']],
+						'PlantarFoot': 
+						[['P1_Plantar_Foot.png', 'P2_Plantar_Foot.png', 'P3_Plantar_Foot.png'],
+						['P4_Plantar_Foot.png', 'P5_Plantar_Foot.png', 'P6_Plantar_Foot.png'],
+						['P7_Plantar_Foot.png', 'P8_Plantar_Foot.png', 'P9_Plantar_Foot.png']],
+						'LowerBack': 
+						[['P1_Lower_Back.png', 'P2_Lower_Back.png', 'P3_Lower_Back.png'],
+						['P4_Lower_Back.png', 'P5_Lower_Back.png', 'P6_Lower_Back.png'],
+						['P7_Lower_Back.png', 'P8_Lower_Back.png', 'P9_Lower_Back.png']],
+						'UpperBack': 
+						[['P1_Upper_Back.png', 'P2_Upper_Back.png', 'P3_Upper_Back.png'],
+						['P4_Upper_Back.png', 'P5_Upper_Back.png', 'P6_Upper_Back.png'],
+						['P7_Upper_Back.png', 'P8_Upper_Back.png', 'P9_Upper_Back.png']],
+						'PosteriorUpperArm': 
+						[['P1_Posterior_Upper_Arm.png', 'P2_Posterior_Upper_Arm.png', 'P3_Posterior_Upper_Arm.png'],
+						['P4_Posterior_Upper_Arm.png', 'P5_Posterior_Upper_Arm.png', 'P6_Posterior_Upper_Arm.png'],
+						['P7_Posterior_Upper_Arm.png', 'P8_Posterior_Upper_Arm.png', 'P9_Posterior_Upper_Arm.png']],
+						'PosteriorForeArm': 
+						[['P1_Posterior_Forearm.png', 'P2_Posterior_Forearm.png', 'P3_Posterior_Forearm.png'],
+						['P4_Posterior_Forearm.png', 'P5_Posterior_Forearm.png', 'P6_Posterior_Forearm.png'],
+						['P7_Posterior_Forearm.png', 'P8_Posterior_Forearm.png', 'P9_PosteriorForeArm.tif']],
+						'DorsalHand': 
+						[['P1_Dorsal_Hand.png', 'P2_Dorsal_Hand.png', 'P3_Dorsal_Hand.png'],
+						['P4_Dorsal_Hand.png', 'P5_Dorsal_Hand.png', 'P6_Dorsal_Hand.png'],
+						['P7_Dorsal_Hand.png', 'P8_Dorsal_Hand.png', 'P9_Dorsal_Hand.png']]};
+
+			// arr_patient = {1:[0,0], 2:[0,1], 3:[0,2],4:[1,0], 5:[1,1], 6:[1,2],7:[2,0], 8:[2,1], 9:[2,2]};
+
+			document.getElementById("reset").onclick = function(g){
+				var elements = document.getElementsByTagName('select');
+				document.getElementById("OCT_image").src = "./images/none.jpg";
+				document.getElementById("text").textContent = "";
+				for (var i = 0; i < elements.length; i++){
+					elements[i].selectedIndex = 0;
+				}
+			}
+			
 			document.getElementById("map_ID_male_front").onclick = function(e) {
 				e.preventDefault();
-				console.log(e.target.id);
+				var part_selected = ($(this).attr("id"));
+				var age_checked = document.querySelectorAll('#age');
+				var tone_checked = document.querySelectorAll('#tone');
+				var patient_checked = document.querySelectorAll('#patient');
+				var age_selected = [...age_checked].map(option => option.value);
+				var tone_selected = [...tone_checked].map(option => option.value);
+				var patient_selected = [...patient_checked].map(option => option.value);
+				img_name = globalThis.arr[e.target.id][age_selected-1][tone_selected-1];
+				
+
 				if(e.target.id == "Forehead"){
-					document.getElementById("OCT_image").src="./OCT_images/P1_forehead.png";
+					document.getElementById("OCT_image").src="./OCT_images/Forehead/" + img_name;
 					document.getElementById("text").textContent = "";
 					document.getElementById("text").textContent +="OCT images of the forehead show a clear distinction of epidermis and dermis. The layers are distinguished by a transition of hypointensity (epidermis) to hyperintensity (dermis). This point is referred to as the dermal epidermal junction. The epidermis begins with a high intensity layer, deemed the skin entrance signal. This corresponds to the start of the first layer of the epidermis, the stratum corneum. It is high intensity due to keratin present. Starting at the air above the epidermis and spanning through the dermis, hair follicles can be seen. They appear as hyperintense linear structures above the epidermis (hair shaft), progressing into the skin tissue as hypointense linear structures. Hair follicles terminate in sebaceous glands, which are  hypointense but not well defined. There is a higher content of sebaceous glands in the face, reflected in these images. Lastly, the dermis contains blood vessels, which appear as hypointense horizontal or circular components, depending on the vessel orientation.";
-				} else if(e.target.id == "Nasal Tip"){
-					document.getElementById("OCT_image").src = "./OCT_images/P1_forehead.png";
+					document.getElementById("top").textContent = "";
+					document.getElementById("top").textContent = "OCT image of Forehead";
+				} else if(e.target.id == "NasalTip"){
+					document.getElementById("OCT_image").src = "./OCT_images/Nasal_Tip/" + img_name;
 					document.getElementById("text").textContent = "";
 					document.getElementById("text").textContent = "The nose epidermis and dermis have variable distinguishability, especially in darker skin tones. There is a high content of sebaceous glands similar to other areas on the face. There may be signs of sun damage on older subjects, shown by breakage inthe hyperintense stratum corneum of the epidermis. Lastly, blood vessels are visible in the dermis.";
-				}else if(e.target.id == "CheekR" | e.target.id == "CheekL"){
-					document.getElementById("OCT_image").src = "./OCT_images/P1_forehead.png";
+					document.getElementById("top").textContent = "";
+					document.getElementById("top").textContent = "OCT image of Nasal Tip";
+				}else if(e.target.id == "Cheek"){
+					document.getElementById("OCT_image").src = "./OCT_images/Cheek/" + img_name;
 					document.getElementById("text").textContent = "";
 					document.getElementById("text").textContent += "The cheek shows a clear distinction of hypointense epidermis to intense dermis. The stratum corneum, correlating with the high intense skin entrance signal, shows variable appearance due to buccal fat beneath the surface. More fat shows an undulating stratum corneum, vs. a more linear stratum corneum for less fat. This may also have a correlation with facial orientation during imaging. There are hair follicles spanning the entirety of the tissue, terminating in a sebaceous gland. Like other areas of the face, there is a higher content of sebaceous glands than the rest of the body. The dermis contains hypointense blood vessels. In individuals of darker skin tones, there is a difficulty in distinguishing the dermal epidermal junction, potentially due to the contribution of melanin pigment. ";
+					document.getElementById("top").textContent = "";
+					document.getElementById("top").textContent = "OCT image of Cheek";
 				}else if(e.target.id == "Lip"){
-					document.getElementById("OCT_image").src = "./OCT_images/P1_forehead.png";
+					document.getElementById("OCT_image").src = "./OCT_images/Lip/" + img_name;
 					document.getElementById("text").textContent = "";
 					document.getElementById("text").textContent = "The lip shows unique architecture on OCT. There is little delineation of skin layers. In addition, it is highly vascular with many small vessels present in the dermis. The stratum corneum appearance is highly variable dependent on orientation, with more tense lips during imaging showing a more linear appearance. “Chapping” of lips, or dry skin, can also be seen with disruption in the continuity of the stratum corneum.";
-				}else if(e.target.id == "Anterior Neck"){
-					document.getElementById("OCT_image").src = "./OCT_images/P1_forehead.png";
+					document.getElementById("top").textContent = "";
+					document.getElementById("top").textContent = "OCT image of Lip";
+				}else if(e.target.id == "AnteriorNeck"){
+					document.getElementById("OCT_image").src = "./OCT_images/Anterior_Neck/" + img_name;
 					document.getElementById("text").textContent = "";
+					document.getElementById("text").textContent = "The neck shows clear distinction between epidermis and dermis. It is unique in that many larger vessels are seen in the dermis. ";
+					document.getElementById("top").textContent = "";
+					document.getElementById("top").textContent = "OCT image of Anterior Neck";
+				}else if(e.target.id == "Chest"){
+					document.getElementById("OCT_image").src = "./OCT_images/Chest/" + img_name;
 					document.getElementById("text").textContent = "";
-				}else if(e.target.id == "ChestL" | e.target.id == "ChestR"){
-					document.getElementById("OCT_image").src = "./OCT_images/P1_forehead.png";
-					document.getElementById("text").textContent = "";
-					document.getElementById("text").textContent = "";
+					document.getElementById("text").textContent = "The chest shows a clear distinction between the epidermis and dermis. Accessory structures including hair follicles, sebaceous glands, and blood vessels are seen. The blood vessels are very numerous in the dermis. The stratum corneum contains variability, potentially due to variation of subject fat content in this area.";
+					document.getElementById("top").textContent = "";
+					document.getElementById("top").textContent = "OCT image of Chest";
 				}else if(e.target.id == "Abdomen"){
-					document.getElementById("OCT_image").src = "./OCT_images/P1_forehead.png";
+					document.getElementById("OCT_image").src = "./OCT_images/Abdomen/" + img_name;
 					document.getElementById("text").textContent = "";
+					document.getElementById("text").textContent = "The abdomen contains a higher fat content, likely leading to the undulating appearance of the stratum corneum in most images. shows a clear distinction of hypointense epidermis to intense dermis. There are hair follicles present, although in less number than the arms and face. Smaller vessels are seen in the dermis.";
+					document.getElementById("top").textContent = "";
+					document.getElementById("top").textContent = "OCT image of Abdomen";
+				}else if(e.target.id == "AnteriorForeArm"){
+					document.getElementById("OCT_image").src = "./OCT_images/Anterior_Forearm/" + img_name;
 					document.getElementById("text").textContent = "";
-				}else if(e.target.id == "Anterior ForearmL" | e.target.id == "Anterior ForearmR"){
-					document.getElementById("OCT_image").src = "./OCT_images/P1_forehead.png";
+					document.getElementById("text").textContent = "The anterior forearm shows a clear distinction of hypointense epidermis to intense dermis. A high content of linear blood vessels are shown as hypointense horizontal structures in the dermis. There are hair follicles present, but in smaller numbers than the posterior forearm.";
+					document.getElementById("top").textContent = "";
+					document.getElementById("top").textContent = "OCT image of Anterior Forearm";
+				}else if(e.target.id == "AnteriorUpperArm"){
+					document.getElementById("OCT_image").src = "./OCT_images/Anterior_Upper_Arm/" + img_name;
 					document.getElementById("text").textContent = "";
+					document.getElementById("text").textContent = "The anterior upper arm shows a clear distinction of hypointense epidermis to intense dermis. The layers are divided by the dermal epidermal junction. This distinction is slightly more difficult to visualize in darker skin tones, possibly due to the impact of melanin. The accessory structures of blood vessels are seen. Overall, there is less presence of hair than the posterior upper arm. ";
+					document.getElementById("top").textContent = "";
+					document.getElementById("top").textContent = "OCT image of Anterior Upperarm";
+				}else if(e.target.id == "Palm"){
+					document.getElementById("OCT_image").src = "./OCT_images/Palm/" + img_name;
 					document.getElementById("text").textContent = "";
-				}else if(e.target.id == "Anterior ArmL" | e.target.id == "Anterior ArmR"){
-					document.getElementById("OCT_image").src = "./OCT_images/P1_forehead.png";
+					document.getElementById("text").textContent = "The palm contains a very unique oct appearance, similar to that of the sole of the foot. These locations are deemed “thick skin”, in comparison to thin skin on the remaining portions of the body such as the face. Thick skin contains a larger epidermis due to the presence of the stratum lucidum layer. The dermis is less clearly visualized here due to the additional epidermal thickness. A characteristic structure in thick skin seen on the palm is a secretory duct, which is the termination of an eccrine sweat gland. They appear as coiled high intensity components of the epidermis. There are few to none hair follicles present in these areas.";
+					document.getElementById("top").textContent = "";
+					document.getElementById("top").textContent = "OCT image of Palm";
+				}else if(e.target.id == "Thigh"){
+					document.getElementById("OCT_image").src = "./OCT_images/Thigh/" + img_name;
 					document.getElementById("text").textContent = "";
+					document.getElementById("text").textContent = "The thigh shows a clear distinction of hypointense epidermis to intense dermis. The stratum corneum appearance is likely impacted by the fat content present in this area that varies per subject, with higher fat content likely contributing to an undulating stratum corneum. Blood vessels are present in the dermis. Hair follicles are present according to subject hair content. ";
+					document.getElementById("top").textContent = "";
+					document.getElementById("top").textContent = "OCT image of Thigh";
+				}else if(e.target.id == "Shin"){
+					document.getElementById("OCT_image").src = "./OCT_images/Shin/" + img_name;
 					document.getElementById("text").textContent = "";
-				}else if(e.target.id == "PalmL" | e.target.id == "PalmR"){
-					document.getElementById("OCT_image").src = "./OCT_images/P1_forehead.png";
+					document.getElementById("text").textContent = "The shin has a very linear stratum corneum/skin entrance signal, likely due to its location above bone similar to the forehead. However, it can be distinguished from the forehead due to less sebaceous glands. There is a clear distinction of hypointense epidermis to intense dermis.Blood vessels are present in the dermis.";
+					document.getElementById("top").textContent = "";
+					document.getElementById("top").textContent = "OCT image of Shin";
+				}else if(e.target.id == "DorsalFoot"){
+					document.getElementById("OCT_image").src = "./OCT_images/Dorsal_Foot/" + img_name;
 					document.getElementById("text").textContent = "";
-					document.getElementById("text").textContent = "";
-				}else if(e.target.id == "ThighL" | e.target.id == "ThighR"){
-					document.getElementById("OCT_image").src = "./OCT_images/P2_forehead.png";
-					document.getElementById("text").textContent = "";
-					document.getElementById("text").textContent = "";
-				}else if(e.target.id == "ShinL" | e.target.id == "ShinR"){
-					document.getElementById("OCT_image").src = "./OCT_images/P1_forehead.png";
-					document.getElementById("text").textContent = "";
-					document.getElementById("text").textContent = "";
-				}else if(e.target.id == "Dorsal FootL" | e.target.id == "Dorsal FootR"){
-					document.getElementById("OCT_image").src = "./OCT_images/P1_forehead.png";
-					document.getElementById("text").textContent = "";
-					document.getElementById("text").textContent = "";
+					document.getElementById("text").textContent = "The skin on the dorsal foot varies highly with the skin on the plantar foot, categorized as thin and thick skin respectively. Dorsal foot skin correlates with expected visual of thin skin, including a clear dermal epidermal junction and skin layers, hair follicles, and vessels in the dermis. ";
+					document.getElementById("top").textContent = "";
+					document.getElementById("top").textContent = "OCT image of Dorsal Foot";
 				} else {
-					document.getElementById("OCT_image").src = "./OCT_images/none.jpg";
+					document.getElementById("OCT_image").src = "./images/none.jpg";
 					document.getElementById("text").textContent = "";
 				}
 			};

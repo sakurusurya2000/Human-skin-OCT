@@ -1,0 +1,371 @@
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>BodyVisualiser</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<div class="navbar">
+			<a class="logo" id="logo" href="#logo"><img src="images/logo.svg" height="40" width="200" alt="logo"/></a>
+			<!-- <div class="dropdown">
+				<button class="dropbtn">Gender 
+				  <i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+				  <a href="male_front.html">Male</a>
+				  <a href="female_front.html">Female</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn">Age 
+				  <i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+				  <a href="#">Less than 30 Years</a>
+				  <a href="#">30-60 Years</a>
+				  <a href="#">More than 60 Years</a>
+				</div>
+			  </div>
+			  <div class="dropdown">
+				<button class="dropbtn">Skintone 
+				  <i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+				  <a href="#">Type I-II</a>
+				  <a href="#">Type II-IV</a>
+				  <a href="#">Type V +</a>
+				</div>
+			  </div>
+			  <div class="dropdown">
+				<button class="dropbtn">Facing 
+				  <i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+				  <a href="male_front.html">Front</a>
+				  <a href="male_back.html">Back</a>
+				</div>
+			  </div> -->
+			</div>
+	</head>
+
+
+	<body style="overflow-y: scroll;">
+		<div class="row no-gutters">
+			<div class="col">
+				<div class="leftside no-gutters">
+					<br>
+					<select class="select" id="age">
+						<option value="0">AGE</option>
+						<option value="1">Less than 30 Years</option>
+						<option value="2">30-60 Years</option>
+						<option value="3">More than 60 Years</option>
+					</select>
+					<select class="select" id="tone">
+						<option value="0">SKINTONE</option>
+						<option value="1">TYPE I-II</option>
+						<option value="2">TYPE III-IV</option>
+						<option value="3">TYPE V</option>
+					</select>
+					<!-- <em>OR</em> -->
+					<!-- <select id="patient">
+						<option value="0">Patient's List</option>
+						<option value="1">P1</option>
+						<option value="2">P2</option>
+						<option value="3">P3</option>
+						<option value="4">P4</option>
+						<option value="5">P5</option>
+						<option value="6">P6</option>
+						<option value="7">P7</option>
+						<option value="8">P8</option>
+						<option value="9">P9</option>
+					</select> -->
+					<br>
+					<br>
+					<a href="male_front.html"><button class="button">Switch Facing</button></a>
+					<button class="button" id="reset">Reset</button>
+					<br>
+					<img src="./images/male-back.jpg" alt="Back Male" usemap="#image-map-male-back">
+					<map id="map_ID_male_back" name="image-map-male-back">
+						<area target="_self" id="Ear" title="Ear" href="" coords="93,67,8" shape="circle">
+						<area target="_self" id="Ear" title="Ear" href="" coords="157,67,8" shape="circle">
+						<area target="_self" id="UpperBack" title="Upper Back " href="" coords="103,162,146,197" shape="rect">
+						<area target="_self" id="PosteriorUpperArm" title="Posterior Arm" href="" coords="46,180,66,185,71,200,64,231,41,230,42,202" shape="poly">
+						<area target="_self" id="PosteriorUpperArm" title="Posterior Arm" href="" coords="203,183,182,186,178,198,185,231,206,228,207,204" shape="poly">
+						<area target="_self" id="PosteriorForeArm" title="Posterior Forearm" href="" coords="37,247,62,249,61,267,48,302,29,299,32,267" shape="poly">
+						<area target="_self" id="PosteriorForeArm" title="Posterior Forearm" href="" coords="187,250,211,249,215,261,219,298,201,301,189,269" shape="poly">
+						<area target="_self" id="LowerBack" title="Lower Back" href="" coords="145,273,106,244" shape="rect">
+						<area target="_self" id="DorsalHand" title="Dorsal Hand" href="" coords="26,342,21" shape="circle">
+						<area target="_self" id="DorsalHand" title="Dorsal Hand" href="" coords="223,341,22" shape="circle">
+						<area target="_self" id="PlantarFoot" title="Planar Foot" href="" coords="124,564,83,580" shape="rect">
+						<area target="_self" id="PlantarFoot" title="Planar Foot" href="" coords="125,564,166,580" shape="rect">
+					</map>
+					<br>
+					<br>
+					<em>Back</em>
+				</div>
+			</div>
+			<div class="col">
+				<div class="middle no-gutters">
+					<div class="row">
+						<div class="top">
+							<div class="text">
+								<p id="top"></p>
+							</div>
+							<img id="OCT_image" src="./images/none.jpg" alt="OCT" width="600px" height="300px">
+						</div>
+					</div>
+					<div class="row">
+						<div class="bottom no-gutters">
+							<br>
+							<div class="text_style">
+								<p id="text"></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="rightside no-gutters">
+					<div class="row">
+						<div class="top">
+							<img id="OCT_image" src="./images/none.jpg" alt="OCT" width="400px" height="300px">
+						</div>
+					</div>
+					<div class="row">
+						<div class="bottom no-gutters">
+							<br>
+							<div class="text_style">
+								<p id="text"></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- <div id="info"><a href="index.html">Switch to male body.</div>
+        <div id="info"><a href="female.html">Switch to female body.</a></div>
+		<div id="info"><a href="kid.html">Switch to kid's body.</a></div> -->
+		<div id="container"></div>
+		
+		<script src="js/three.js"></script>
+		
+		<script src="js/UCSCharacter.js"></script>
+
+		<script src='js/data.gui.js'></script>
+				
+		<script src="js/orbit.js"></script>
+
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+
+		<script>
+			window.onload = function () {
+				var ImageMap = function (map, img) {
+						var n,
+							areas = map.getElementsByTagName('area'),
+							len = areas.length,
+							coords = [],
+							previousWidth = 250;
+						for (n = 0; n < len; n++) {
+							coords[n] = areas[n].coords.split(',');
+						}
+						this.resize = function () {
+							var n, m, clen,
+								x = img.offsetWidth / previousWidth;
+							for (n = 0; n < len; n++) {
+								clen = coords[n].length;
+								for (m = 0; m < clen; m++) {
+									coords[n][m] *= x;
+								}
+								areas[n].coords = coords[n].join(',');
+							}
+							previousWidth = img.offsetWidth;
+							return true;
+						};
+						window.onresize = this.resize;
+					},
+					imageMap = new ImageMap(document.getElementById('map_ID'), document.getElementById('img_ID'));
+				imageMap.resize();
+				return;
+			}
+			
+			$(document).tooltip({
+				track: true,
+				position: { my: "left+10 center", at: "right center" },
+			
+			});
+
+			var arr = {'Forehead': 
+						[['P1_Forehead.png', 'P2_Forehead.png', 'P3_Forehead.png'],
+						['P4_Forehead.png', 'P5_Forehead.png', 'P6_Forehead.png'],
+						['P7_Forehead.png', 'P8_Forehead.png', 'P9_Forehead.png']],
+						'Cheek': 
+						[['P1_Cheek.png', 'P2_Cheek.png', 'P3_Cheek.png'],
+						['P4_Cheek.png', 'P5_Cheek.png', 'P6_Cheek.png'],
+						['P7_Cheek.png', 'P8_Cheek.png', 'P9_Cheek.png']],
+						'NasalTip': 
+						[['P1_NasalTip.png', 'P2_NasalTip.png', 'P3_NasalTip.png'],
+						['P4_NasalTip.png', 'P5_NasalTip.png', 'P6_NasalTip.png'],
+						['P7_NasalTip.png', 'P8_NasalTip.png', 'P9_NasalTip.png']],
+						'Lip': 
+						[['P1_Lip.png', 'P2_Lip.png', 'P3_Lip.png'],
+						['P4_Lip.png', 'P5_Lip.png', 'P6_Lip.png'],
+						['P7_Lip.png', 'P8_Lip.png', 'P9_Lip.png']],
+						'Ear': 
+						[['P1_Ear.png', 'P2_Ear.png', 'P3_Ear.png'],
+						['P4_Ear.png', 'P5_Ear.png', 'P6_Ear.png'],
+						['P7_Ear.png', 'P8_Ear.png', 'P9_Ear.png']],
+						'AnteriorNeck': 
+						[['P1_AnteriorNeck.png', 'P2_AnteriorNeck.png', 'P3_AnteriorNeck.png'],
+						['P4_AnteriorNeck.png', 'P5_AnteriorNeck.png', 'P6_AnteriorNeck.png'],
+						['P7_AnteriorNeck.png', 'P8_AnteriorNeck.png', 'P9_AnteriorNeck.png']],
+						'Chest': 
+						[['P1_Chest.png', 'P2_Chest.png', 'P3_Chest.png'],
+						['P4_Chest.png', 'P5_Chest.png', 'P6_Chest.png'],
+						['P7_Chest.png', 'P8_Chest.png', 'P9_Chest.png']],
+						'AnteriorUpperArm': 
+						[['P1_Anterior_Upper_Arm.png', 'P2_Anterior_Upper_Arm.png', 'P3_Anterior_Upper_Arm.png'],
+						['P4_Anterior_Upper_Arm.png', 'P5_Anterior_Upper_Arm.png', 'P6_Anterior_Upper_Arm.png'],
+						['P7_Anterior_Upper_Arm.png', 'P8_Anterior_Upper_Arm.png', 'P9_Anterior_Upper_Arm.png']],
+						'AnteriorForeArm': 
+						[['P1_Anterior_ForeArm.png', 'P2_Anterior_ForeArm.png', 'P3_Anterior_ForeArm.png'],
+						['P4_Anterior_ForeArm.png', 'P5_Anterior_ForeArm.png', 'P6_Anterior_ForeArm.png'],
+						['P7_Anterior_ForeArm.png', 'P8_Anterior_ForeArm.png', 'P9_Anterior_ForeArm.png']],
+						'Palm': 
+						[['P1_Palm.png', 'P2_Palm.png', 'P3_Palm.png'],
+						['P4_Palm.png', 'P5_Palm.png', 'P6_Palm.png'],
+						['P7_Palm.png', 'P8_Palm.png', 'P9_Palm.png']],
+						'Abdomen': 
+						[['P1_Abdomen.png', 'P2_Abdomen.png', 'P3_Abdomen.png'],
+						['P4_Abdomen.png', 'P5_Abdomen.png', 'P6_Abdomen.png'],
+						['P7_Abdomen.png', 'P8_Abdomen.png', 'P9_Abdomen.png']],
+						'Shin': 
+						[['P1_Shin.png', 'P2_Shin.png', 'P3_Shin.png'],
+						['P4_Shin.png', 'P5_Shin.png', 'P6_Shin.png'],
+						['P7_Shin.png', 'P8_Shin.png', 'P9_Shin.png']],
+						'Thigh': 
+						[['P1_Thigh.png', 'P2_Thigh.png', 'P3_Thigh.png'],
+						['P4_Thigh.png', 'P5_Thigh.png', 'P6_Thigh.png'],
+						['P7_Thigh.png', 'P8_Thigh.png', 'P9_Thigh.png']],
+						'DorsalFoot': 
+						[['P1_Dorsal_Foot.png', 'P2_Dorsal_Foot.png', 'P3_Dorsal_Foot.png'],
+						['P4_Dorsal_Foot.png', 'P5_Dorsal_Foot.png', 'P6_Dorsal_Foot.png'],
+						['P7_Dorsal_Foot.png', 'P8_Dorsal_Foot.png', 'P9_Dorsal_Foot.png']],
+						'PlantarFoot': 
+						[['P1_Plantar_Foot.png', 'P2_Plantar_Foot.png', 'P3_Plantar_Foot.png'],
+						['P4_Plantar_Foot.png', 'P5_Plantar_Foot.png', 'P6_Plantar_Foot.png'],
+						['P7_Plantar_Foot.png', 'P8_Plantar_Foot.png', 'P9_Plantar_Foot.png']],
+						'LowerBack': 
+						[['P1_Lower_Back.png', 'P2_Lower_Back.png', 'P3_Lower_Back.png'],
+						['P4_Lower_Back.png', 'P5_Lower_Back.png', 'P6_Lower_Back.png'],
+						['P7_Lower_Back.png', 'P8_Lower_Back.png', 'P9_Lower_Back.png']],
+						'UpperBack': 
+						[['P1_Upper_Back.png', 'P2_Upper_Back.png', 'P3_Upper_Back.png'],
+						['P4_Upper_Back.png', 'P5_Upper_Back.png', 'P6_Upper_Back.png'],
+						['P7_Upper_Back.png', 'P8_Upper_Back.png', 'P9_Upper_Back.png']],
+						'PosteriorUpperArm': 
+						[['P1_Posterior_Upper_Arm.png', 'P2_Posterior_Upper_Arm.png', 'P3_Posterior_Upper_Arm.png'],
+						['P4_Posterior_Upper_Arm.png', 'P5_Posterior_Upper_Arm.png', 'P6_Posterior_Upper_Arm.png'],
+						['P7_Posterior_Upper_Arm.png', 'P8_Posterior_Upper_Arm.png', 'P9_Posterior_Upper_Arm.png']],
+						'PosteriorForeArm': 
+						[['P1_Posterior_Forearm.png', 'P2_Posterior_Forearm.png', 'P3_Posterior_Forearm.png'],
+						['P4_Posterior_Forearm.png', 'P5_Posterior_Forearm.png', 'P6_Posterior_Forearm.png'],
+						['P7_Posterior_Forearm.png', 'P8_Posterior_Forearm.png', 'P9_PosteriorForeArm.tif']],
+						'DorsalHand': 
+						[['P1_Dorsal_Hand.png', 'P2_Dorsal_Hand.png', 'P3_Dorsal_Hand.png'],
+						['P4_Dorsal_Hand.png', 'P5_Dorsal_Hand.png', 'P6_Dorsal_Hand.png'],
+						['P7_Dorsal_Hand.png', 'P8_Dorsal_Hand.png', 'P9_Dorsal_Hand.png']]};
+
+			// arr_patient = {1:[0,0], 2:[0,1], 3:[0,2],4:[1,0], 5:[1,1], 6:[1,2],7:[2,0], 8:[2,1], 9:[2,2]};
+
+			document.getElementById("reset").onclick = function(g){
+				var elements = document.getElementsByTagName('select');
+				document.getElementById("OCT_image").src = "./images/none.jpg";
+				document.getElementById("text").textContent = "";
+				for (var i = 0; i < elements.length; i++){
+					elements[i].selectedIndex = 0;
+				}
+			}
+
+			document.getElementById("map_ID_male_back").onclick = function(e) {
+				e.preventDefault();
+				var part_selected = ($(this).attr("id"));
+				var age_checked = document.querySelectorAll('#age');
+				var tone_checked = document.querySelectorAll('#tone');
+				var patient_checked = document.querySelectorAll('#patient');
+				var age_selected = [...age_checked].map(option => option.value);
+				var tone_selected = [...tone_checked].map(option => option.value);
+				var patient_selected = [...patient_checked].map(option => option.value);
+				console.log(e.target.id);
+				if(age_selected  == 0 && tone_selected == 0){
+						alert("Select Age and Skin tone");
+					}
+					else if(age_selected ==0 && tone_selected > 0){
+						alert("Select Age");
+					}
+					else if(age_selected > 0 && tone_selected == 0){
+						alert("Select Skin tone");
+					}
+					else if(age_selected > 0 && tone_selected > 0){
+						img_name = globalThis.arr[e.target.id][age_selected-1][tone_selected-1];
+					}
+
+				if(e.target.id=="Ear"){
+					document.getElementById("OCT_image").src="./OCT_images/Ear/" + img_name;
+					document.getElementById("text").textContent = "";
+					document.getElementById("text").textContent +="The ear is distinguished by the presence of many small hairs, shown as hyperintense structures above the epidermis and continuing as hypointense structures into the dermis. There is a clear distinction of epidermis and dermis. A high sebaceous gland content is seen.";
+					document.getElementById("top").textContent = "";
+					document.getElementById("top").textContent = "OCT image of Ear";
+				}else if(e.target.id=="UpperBack"){
+					document.getElementById("OCT_image").src="./OCT_images/Upper_Back/" + img_name;
+					document.getElementById("text").textContent = "";
+					document.getElementById("text").textContent +="The upper back appears similar to the lower back, but with less undulations in the stratum corneum potentially due to less fat content here. There is distinction of hypointense epidermis to intense dermis. Hair follicles are present. Blood vessels are visible in the dermis.";
+					document.getElementById("top").textContent = "";
+					document.getElementById("top").textContent = "OCT image of Upper Back";
+				}else if(e.target.id=="PosteriorUpperArm"){
+					document.getElementById("OCT_image").src="./OCT_images/Posterior_Upper_Arm/" + img_name;
+					document.getElementById("text").textContent = "";
+					document.getElementById("text").textContent +="The posterior forearm shows a clear distinction of hypointense epidermis to intense dermis. The stratum corneum is more undulating than the anterior surface, and there are more hair follicles present than the anterior surface. There is a high content of blood vessels in the dermis.";
+					document.getElementById("top").textContent = "";
+					document.getElementById("top").textContent = "OCT image of Posterior Upperarm";
+				}
+				else if(e.target.id=="PosteriorForeArm"){
+					document.getElementById("OCT_image").src="./OCT_images/Posterior_Forearm/" + img_name;
+					document.getElementById("text").textContent = "";
+					document.getElementById("text").textContent +="The posterior forearm shows a clear distinction of hypointense epidermis to intense dermis. There is a higher content of hair than the anterior surface. Larger vessels are present in the dermis, shown as hypointense structures spanning horizontally or smaller dependent on the orientation of the vessel.";
+					document.getElementById("top").textContent = "";
+					document.getElementById("top").textContent = "OCT image of Posterior Forearm";
+				}
+				else if(e.target.id=="LowerBack"){
+					document.getElementById("OCT_image").src="./OCT_images/Lower_Back/" + img_name;
+					document.getElementById("text").textContent = "";
+					document.getElementById("text").textContent +="The lower back shows more undulating appearance on the stratum corneum compared to the upper back, likely due to contribution of additional fat stored in this area. There shows a clear distinction of hypointense epidermis to intense dermis. Although more difficult to distinguish in darker skin tones. Hair follicles and blood vessels are present. There are few sebaceous glands compared to the face.";
+					document.getElementById("top").textContent = "";
+					document.getElementById("top").textContent = "OCT image of Lower Back";
+				}
+				else if(e.target.id=="DorsalHand"){
+					document.getElementById("OCT_image").src="./OCT_images/Dorsal_Hand/" + img_name;
+					document.getElementById("text").textContent = "";
+					document.getElementById("text").textContent +="The dorsal hand shows stark contrast to the palmar surface, being categorized as “thin skin” compared to thick skin of the palm. The thin skin on the dorsal hand shows a clear distinction of hypointense epidermis to intense dermis. There is a high content of vessels in the dermis of varying sizes.";
+					document.getElementById("top").textContent = "";
+					document.getElementById("top").textContent = "OCT image of Dorsal Hand";
+				}
+				else if(e.target.id=="PlantarFoot"){
+					document.getElementById("OCT_image").src="./OCT_images/Plantar_Foot/" + img_name;
+					document.getElementById("text").textContent = "";
+					document.getElementById("text").textContent +="The plantar foot is very unique in appearance, similar to that of the palm. These locations are deemed “thick skin”, and contain an additional epidermal layer, the stratum lucidum. There are characteristic eccrine secretory ducts, seen as coiled structures in the epidermis. There is penetration to the dermis showing blood vessels.";
+					document.getElementById("top").textContent = "";
+					document.getElementById("top").textContent = "OCT image of Plantar Foot";
+				}
+				else {
+					document.getElementById("OCT_image").src = "./images/none.jpg";
+					document.getElementById("text").textContent = "";
+				}
+			};
+
+			</script>
+	</body>
+</html>

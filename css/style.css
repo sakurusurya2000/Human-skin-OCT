@@ -2,6 +2,7 @@
  * Copyright (c) 2014, Fashiontec (http://fashiontec.org)
  * Licensed under LGPL, Version 3
  */
+<<<<<<< Updated upstream
  
 			body {
 				color: #000;
@@ -177,3 +178,224 @@
 				text-align: justify;
 				text-justify: inter-word;
 			  }*/
+=======
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	color: #000;
+	font-family: Monospace;
+	font-size: 15px;
+	text-align: center;
+	overflow: auto;
+
+	background-color: #fff;
+	margin: 0px;
+	overflow: hidden;
+}
+
+#title {
+	position: absolute;
+	top: 0px;
+	padding: 15px;
+}
+
+.logo {
+	max-width: 15rem;
+	display: flex;
+	order: 1;
+}
+
+nav {
+	order: 2;
+}
+
+.navbar {
+	overflow: hidden;
+	background-color: #ecbcb4;
+}
+
+.navbar a {
+	float: left;
+	font-size: 16px;
+	color: black;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+.dropdown {
+	float: right;
+	overflow: hidden;
+}
+
+.dropdown .dropbtn {
+	border: none;
+	outline: none;
+	color: black;
+	padding: 14px 16px;
+	background-color: inherit;
+	font-family: inherit;
+	font-size: 1.75rem;
+	font-weight: bold;
+	margin: 0;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+	background-color: #B1968A;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.dropdown-content a {
+	float: none;
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.dropdown-content a:hover {
+	background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.leftside {
+	border-style: solid;
+	border-color: #767676;
+	float: left;
+	height: 100vh;
+	width: 25%;
+}
+
+.middle {
+	border-style: solid;
+	border-color: #767676;
+	float: left;
+	height: 100vh;
+	width: 40%;
+}
+
+.rightside {
+	border-style: solid;
+	border-color: #767676;
+	float: left;
+	height: 100vh;
+	width: 34%;
+}
+
+.top {
+	vertical-align: top;
+	float: center;
+	border: 1px;
+	border-style: solid;
+	border-color: #767676;
+	border-bottom-width: 5px;
+}
+
+.bottom {
+	vertical-align: bottom;
+	float: center;
+}
+
+.dot {
+	height: 25px;
+	width: 25px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+.ui-tooltip {
+	position: absolute;
+	color: red;
+	font-weight: bold;
+	padding: 4px 8px;
+}
+
+.text_style {
+	padding: 2%;
+	margin-right: 3%;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.text {
+	padding: 2%;
+	margin-right: 3%;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: bold;
+	font-size: 25px;
+}
+
+.select {
+	display: inline-block;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0);
+	background-color: #767676;
+	color: #fff;
+	font-size: 1rem;
+	border-radius: 20px;
+}
+
+.img_title_style {
+	font-size: 24px;
+	color: brown;
+}
+
+.button {
+	display: inline-block;
+	background-color: #767676;
+	border-radius: 20px;
+	color: white;
+	text-align: center;
+	cursor: pointer;
+}
+
+.map {
+	background-color: #767676;
+	position: relative;
+}
+
+.map img {
+	opacity: .4;
+}
+
+.map marker1 {
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	border-radius: 50px;
+	background-color: #000;
+}
+
+#container {
+	position: relative;
+}
+
+.marker {
+	height: 15px;
+	width: 15px;
+	border-radius: 30px;
+	background-color: yellow;
+	position: absolute;
+	background-repeat: no-repeat;
+	background-size: cover;
+	top: 2px;
+	left: 91px;
+	opacity: 0.1;
+	-moz-opacity: 0.1;
+	-webkit-opacity: 0.3;
+}
+>>>>>>> Stashed changes

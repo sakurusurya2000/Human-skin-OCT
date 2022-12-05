@@ -5,7 +5,7 @@
 <head>
 	<title>BodyVisualiser</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="viewport" content="width=device-width, user-scalable=yes, minimum-scale=1.0, maximum-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 	<div class="navbar">
@@ -110,7 +110,7 @@
 						</div>
 						<div id="container">
 							<img id="OCT_image" name="imgName" src="./images/none.jpg" useMap="#image-map-male-front"
-								width="600px" height="300px">
+							style="max-width:100%; max-height:100%;">
 							<map name="P1_Forehead" id="P1_Forehead">
 								<area target="" alt="Hair Shaft" title="Hair Shaft" href="#" coords="85,78,15"
 									shape="circle">
@@ -2438,7 +2438,7 @@
 			<div class="rightside no-gutters">
 				<div class="row">
 					<div class="top no-gutters">
-						<img id="graph" src="./images/none.jpg" width="500px" height="300px">
+						<img id="graph" src="./images/none.jpg" style="max-width:100%; max-height:100%;">
 					</div>
 				</div>
 				<div class="row">
@@ -2739,7 +2739,7 @@
 			data: {
 				labels: [
 					'Attenuation Coefficient',
-					'Area',
+					'AUC',
 					'Peak'
 				],
 				datasets: [{
